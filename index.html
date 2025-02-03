@@ -52,17 +52,21 @@
                     
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-2">Language</label>
-                        <select id="language" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
-                            <option value="">Any</option>
-                            <option value="python">Python</option>
-                            <option value="javascript">JavaScript</option>
-                            <option value="typescript">TypeScript</option>
-                            <option value="java">Java</option>
-                            <option value="go">Go</option>
-                            <option value="rust">Rust</option>
-                            <option value="cpp">C++</option>
-                            <option value="ruby">Ruby</option>
-                        </select>
+                        <div class="flex gap-2">
+                            <select id="language" class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                                <option value="">Select</option>
+                                <option value="python">Python</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="typescript">TypeScript</option>
+                                <option value="java">Java</option>
+                                <option value="go">Go</option>
+                                <option value="rust">Rust</option>
+                                <option value="cpp">C++</option>
+                                <option value="ruby">Ruby</option>
+                            </select>
+                            <input type="text" id="languageManual" placeholder="Or enter manually" 
+                                   class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                        </div>
                     </div>
                 </div>
 
@@ -70,24 +74,32 @@
                 <div class="space-y-6">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-2">Stars</label>
-                        <select id="stars" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
-                            <option value="">Any</option>
-                            <option value=">100">100+</option>
-                            <option value=">1000">1,000+</option>
-                            <option value=">5000">5,000+</option>
-                            <option value=">10000">10,000+</option>
-                            <option value=">50000">50,000+</option>
-                        </select>
+                        <div class="flex gap-2">
+                            <select id="stars" class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                                <option value="">Select</option>
+                                <option value=">100">100+</option>
+                                <option value=">1000">1,000+</option>
+                                <option value=">5000">5,000+</option>
+                                <option value=">10000">10,000+</option>
+                                <option value=">50000">50,000+</option>
+                            </select>
+                            <input type="text" id="starsManual" placeholder="Or enter manually" 
+                                   class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                        </div>
                     </div>
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-2">Updated</label>
-                        <select id="updated" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
-                            <option value="">Any time</option>
-                            <option value=">2024-01-01">This year</option>
-                            <option value=">2023-07-01">Last 6 months</option>
-                            <option value=">2023-01-01">Last year</option>
-                        </select>
+                        <div class="flex gap-2">
+                            <select id="updated" class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                                <option value="">Select</option>
+                                <option value=">2024-01-01">This year</option>
+                                <option value=">2023-07-01">Last 6 months</option>
+                                <option value=">2023-01-01">Last year</option>
+                            </select>
+                            <input type="text" id="updatedManual" placeholder="Or enter manually" 
+                                   class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                        </div>
                     </div>
                 </div>
 
@@ -95,13 +107,17 @@
                 <div class="space-y-6">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-2">License</label>
-                        <select id="license" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
-                            <option value="">Any</option>
-                            <option value="mit">MIT</option>
-                            <option value="apache-2.0">Apache 2.0</option>
-                            <option value="gpl">GPL</option>
-                            <option value="bsd-3-clause">BSD 3-Clause</option>
-                        </select>
+                        <div class="flex gap-2">
+                            <select id="license" class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                                <option value="">Select</option>
+                                <option value="mit">MIT</option>
+                                <option value="apache-2.0">Apache 2.0</option>
+                                <option value="gpl">GPL</option>
+                                <option value="bsd-3-clause">BSD 3-Clause</option>
+                            </select>
+                            <input type="text" id="licenseManual" placeholder="Or enter manually" 
+                                   class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                        </div>
                     </div>
 
                     <div>
@@ -119,24 +135,32 @@
                 <div class="space-y-6">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-2">Forks</label>
-                        <select id="forks" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
-                            <option value="">Any</option>
-                            <option value=">10">10+</option>
-                            <option value=">50">50+</option>
-                            <option value=">100">100+</option>
-                            <option value=">500">500+</option>
-                        </select>
+                        <div class="flex gap-2">
+                            <select id="forks" class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                                <option value="">Select</option>
+                                <option value=">10">10+</option>
+                                <option value=">50">50+</option>
+                                <option value=">100">100+</option>
+                                <option value=">500">500+</option>
+                            </select>
+                            <input type="text" id="forksManual" placeholder="Or enter manually" 
+                                   class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                        </div>
                     </div>
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-2">Issues</label>
-                        <select id="issues" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
-                            <option value="">Any</option>
-                            <option value="<10">Less than 10</option>
-                            <option value="<50">Less than 50</option>
-                            <option value=">10">More than 10</option>
-                            <option value=">50">More than 50</option>
-                        </select>
+                        <div class="flex gap-2">
+                            <select id="issues" class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                                <option value="">Select</option>
+                                <option value="<10">Less than 10</option>
+                                <option value="<50">Less than 50</option>
+                                <option value=">10">More than 10</option>
+                                <option value=">50">More than 50</option>
+                            </select>
+                            <input type="text" id="issuesManual" placeholder="Or enter manually" 
+                                   class="mt-1 block w-1/2 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -224,13 +248,13 @@
     <script>
         function generateQuery() {
             let query = document.getElementById("query").value.trim().replace(/\s+/g, "+");
-            let language = document.getElementById("language").value;
-            let stars = document.getElementById("stars").value;
-            let updated = document.getElementById("updated").value;
-            let license = document.getElementById("license").value;
+            let language = document.getElementById("language").value || document.getElementById("languageManual").value.trim();
+            let stars = document.getElementById("stars").value || document.getElementById("starsManual").value.trim();
+            let updated = document.getElementById("updated").value || document.getElementById("updatedManual").value.trim();
+            let license = document.getElementById("license").value || document.getElementById("licenseManual").value.trim();
             let sort = document.getElementById("sort").value;
-            let forks = document.getElementById("forks").value;
-            let issues = document.getElementById("issues").value;
+            let forks = document.getElementById("forks").value || document.getElementById("forksManual").value.trim();
+            let issues = document.getElementById("issues").value || document.getElementById("issuesManual").value.trim();
             let archived = document.getElementById("archived").checked;
             let hasTopics = document.getElementById("hasTopics").checked;
             let goodFirstIssue = document.getElementById("goodFirstIssue").checked;
