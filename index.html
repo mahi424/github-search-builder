@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Query Builder</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        input, select, button { margin: 10px; padding: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>🚀 GitHub Search Query Generator</h1>
+    <p>Select your filters and generate a search link for GitHub.</p>
+
+    <label for="query">Search Query:</label>
+    <input type="text" id="query" placeholder="Enter keywords...">
+
+    <label for="language">Language:</label>
+    <select id="language">
+        <option value="">Any</option>
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+        <option value="go">Go</option>
+        <option value="rust">Rust</option>
+    </select>
+
+    <label for="stars">Stars:</label>
+    <select id="stars">
+        <option value="">Any</option>
+        <option value=">1000">More than 1000</option>
+        <option value=">5000">More than 5000</option>
+        <option value=">10000">More than 10,000</option>
+    </select>
+
+    <label for="sort">Sort By:</label>
+    <select id="sort">
+        <option value="stars">Stars</option>
+        <option value="forks">Forks</option>
+        <option value="updated">Recently Updated</option>
+    </select>
+
+    <button onclick="generateQuery()">Generate GitHub Search Link</button>
+
+    <h3>🔗 Your Search Link:</h3>
+    <p><a id="searchLink" href="#" target="_blank">[Click to Search]</a></p>
+
+    <script>
+        function generateQuery() {
+            let query = document.getElementById("query").value.trim().replace(" ", "+");
+            let language = document.getElementById("language").value;
+            let stars = document.getElementById("stars").value;
+            let sort = document.getElementById("sort").value;
+
+            let searchQuery = "q=" + query;
+            if (language) searchQuery += "+language:" + language;
+            if (stars) searchQuery += "+stars:" + stars;
+
+            let url = `https://github.com/search?${searchQuery}&type=repositories&s=${sort}&o=desc`;
+            document.getElementById("searchLink").href = url;
+            document.getElementById("searchLink").innerText = url;
+        }
+    </script>
+
+</body>
+</html>
