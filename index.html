@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced GitHub Query Builder</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .filter-card {
             transition: all 0.3s ease;
         }
         .filter-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
         .tooltip {
             visibility: hidden;
@@ -34,25 +34,25 @@
 <body class="bg-gray-50">
     <div class="container mx-auto px-4 py-8">
         <!-- Header -->
-        <div class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">🚀 Advanced GitHub Search</h1>
-            <p class="text-gray-600">Build powerful GitHub search queries with our intuitive interface</p>
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-800 mb-4">🚀 Advanced GitHub Search</h1>
+            <p class="text-xl text-gray-600">Build powerful GitHub search queries with our intuitive interface</p>
         </div>
 
         <!-- Main Search Form -->
-        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white rounded-xl shadow-2xl p-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Basic Filters -->
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Keywords</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Keywords</label>
                         <input type="text" id="query" placeholder="Enter search terms..." 
-                               class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                               class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
                     </div>
                     
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Language</label>
-                        <select id="language" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Language</label>
+                        <select id="language" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
                             <option value="">Any</option>
                             <option value="python">Python</option>
                             <option value="javascript">JavaScript</option>
@@ -67,10 +67,10 @@
                 </div>
 
                 <!-- Advanced Filters -->
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Stars</label>
-                        <select id="stars" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Stars</label>
+                        <select id="stars" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
                             <option value="">Any</option>
                             <option value=">100">100+</option>
                             <option value=">1000">1,000+</option>
@@ -81,8 +81,8 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Updated</label>
-                        <select id="updated" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Updated</label>
+                        <select id="updated" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
                             <option value="">Any time</option>
                             <option value=">2024-01-01">This year</option>
                             <option value=">2023-07-01">Last 6 months</option>
@@ -92,10 +92,10 @@
                 </div>
 
                 <!-- Additional Filters -->
-                <div class="space-y-4">
+                <div class="space-y-6">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">License</label>
-                        <select id="license" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">License</label>
+                        <select id="license" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
                             <option value="">Any</option>
                             <option value="mit">MIT</option>
                             <option value="apache-2.0">Apache 2.0</option>
@@ -105,8 +105,8 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700">Sort By</label>
-                        <select id="sort" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
+                        <select id="sort" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
                             <option value="stars">Most Stars</option>
                             <option value="forks">Most Forks</option>
                             <option value="updated">Recently Updated</option>
@@ -114,10 +114,35 @@
                         </select>
                     </div>
                 </div>
+
+                <!-- More Filters -->
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Forks</label>
+                        <select id="forks" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                            <option value="">Any</option>
+                            <option value=">10">10+</option>
+                            <option value=">50">50+</option>
+                            <option value=">100">100+</option>
+                            <option value=">500">500+</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Issues</label>
+                        <select id="issues" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-3">
+                            <option value="">Any</option>
+                            <option value="<10">Less than 10</option>
+                            <option value="<50">Less than 50</option>
+                            <option value=">10">More than 10</option>
+                            <option value=">50">More than 50</option>
+                        </select>
+                    </div>
+                </div>
             </div>
 
             <!-- Checkboxes -->
-            <div class="mt-6 flex flex-wrap gap-4">
+            <div class="mt-8 flex flex-wrap gap-6">
                 <label class="inline-flex items-center">
                     <input type="checkbox" id="archived" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                     <span class="ml-2">Exclude archived</span>
@@ -132,53 +157,63 @@
                     <input type="checkbox" id="goodFirstIssue" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
                     <span class="ml-2">Good first issues</span>
                 </label>
+
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="hasWiki" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    <span class="ml-2">Has wiki</span>
+                </label>
+
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="hasDiscussions" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    <span class="ml-2">Has discussions</span>
+                </label>
             </div>
 
             <!-- Search Button -->
-            <div class="mt-6 text-center">
+            <div class="mt-8 text-center">
                 <button onclick="generateQuery()" 
-                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-bold rounded-lg shadow-lg text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300">
                     🔍 Generate Search
                 </button>
             </div>
 
             <!-- Search Link -->
-            <div class="mt-6">
-                <h3 class="text-lg font-medium text-gray-900 mb-2">🔗 Your Search Link:</h3>
-                <div class="bg-gray-50 p-4 rounded-md">
+            <div class="mt-8">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">🔗 Your Search Link:</h3>
+                <div class="bg-gray-50 p-4 rounded-lg">
                     <a id="searchLink" href="#" target="_blank" class="text-indigo-600 hover:text-indigo-800 break-all">[Click to Search]</a>
                 </div>
             </div>
         </div>
 
         <!-- Tutorial Section -->
-        <div class="mt-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">📚 Search Tips & Examples</h2>
+        <div class="mt-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">📚 Search Tips & Examples</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Basic Search -->
-                <div class="bg-white p-4 rounded-lg shadow filter-card">
-                    <h3 class="font-bold text-lg mb-2">Basic Search</h3>
-                    <p class="text-gray-600 mb-2">Combine keywords with filters:</p>
-                    <code class="block bg-gray-50 p-2 rounded">
+                <div class="bg-white p-6 rounded-xl shadow-lg filter-card">
+                    <h3 class="font-bold text-xl mb-3">Basic Search</h3>
+                    <p class="text-gray-600 mb-3">Combine keywords with filters:</p>
+                    <code class="block bg-gray-50 p-3 rounded-lg">
                         machine learning language:python stars:>1000
                     </code>
                 </div>
 
                 <!-- Advanced Filters -->
-                <div class="bg-white p-4 rounded-lg shadow filter-card">
-                    <h3 class="font-bold text-lg mb-2">Advanced Filters</h3>
-                    <p class="text-gray-600 mb-2">Use date ranges:</p>
-                    <code class="block bg-gray-50 p-2 rounded">
+                <div class="bg-white p-6 rounded-xl shadow-lg filter-card">
+                    <h3 class="font-bold text-xl mb-3">Advanced Filters</h3>
+                    <p class="text-gray-600 mb-3">Use date ranges:</p>
+                    <code class="block bg-gray-50 p-3 rounded-lg">
                         created:>2023-01-01 pushed:>2024-01-01
                     </code>
                 </div>
 
                 <!-- Organization Search -->
-                <div class="bg-white p-4 rounded-lg shadow filter-card">
-                    <h3 class="font-bold text-lg mb-2">Organization Search</h3>
-                    <p class="text-gray-600 mb-2">Search within organizations:</p>
-                    <code class="block bg-gray-50 p-2 rounded">
+                <div class="bg-white p-6 rounded-xl shadow-lg filter-card">
+                    <h3 class="font-bold text-xl mb-3">Organization Search</h3>
+                    <p class="text-gray-600 mb-3">Search within organizations:</p>
+                    <code class="block bg-gray-50 p-3 rounded-lg">
                         org:facebook language:python
                     </code>
                 </div>
@@ -194,9 +229,13 @@
             let updated = document.getElementById("updated").value;
             let license = document.getElementById("license").value;
             let sort = document.getElementById("sort").value;
+            let forks = document.getElementById("forks").value;
+            let issues = document.getElementById("issues").value;
             let archived = document.getElementById("archived").checked;
             let hasTopics = document.getElementById("hasTopics").checked;
             let goodFirstIssue = document.getElementById("goodFirstIssue").checked;
+            let hasWiki = document.getElementById("hasWiki").checked;
+            let hasDiscussions = document.getElementById("hasDiscussions").checked;
 
             let searchQuery = [];
             if (query) searchQuery.push(query);
@@ -204,9 +243,13 @@
             if (stars) searchQuery.push(`stars:${stars}`);
             if (updated) searchQuery.push(`pushed:${updated}`);
             if (license) searchQuery.push(`license:${license}`);
+            if (forks) searchQuery.push(`forks:${forks}`);
+            if (issues) searchQuery.push(`issues:${issues}`);
             if (archived) searchQuery.push("archived:false");
             if (hasTopics) searchQuery.push("topics:>0");
             if (goodFirstIssue) searchQuery.push("label:good-first-issue");
+            if (hasWiki) searchQuery.push("has:wiki");
+            if (hasDiscussions) searchQuery.push("has:discussions");
 
             let url = `https://github.com/search?q=${searchQuery.join("+")}&type=repositories&s=${sort}&o=desc`;
             document.getElementById("searchLink").href = url;
